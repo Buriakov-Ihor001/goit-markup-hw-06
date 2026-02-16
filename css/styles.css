@@ -1014,6 +1014,10 @@ img {
     margin-top: auto;
 }
 
+.page-address-mobail {
+    font-style: normal;
+}
+
 .address-list-mobail {
     display: flex;
     align-items: flex-start;
