@@ -203,6 +203,10 @@ img {
         padding: 0 15px;
     }
 
+    .accent-studio {
+        margin-right: 76px;
+    }
+
     .address-list {
         flex-wrap: nowrap;
         flex-direction: row;
@@ -300,6 +304,10 @@ img {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
         max-width: 1440px;
         padding: 188px 0;
+    }
+
+    .hero-title {
+        margin-bottom: 48px;
     }
 }
 
