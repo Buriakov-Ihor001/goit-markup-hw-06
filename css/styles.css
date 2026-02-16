@@ -583,6 +583,10 @@ img {
 
 .portfolio-item {
     max-width: 288px;
+    box-shadow:
+            0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -638,7 +642,15 @@ img {
     }
 
     .portfolio-item {
+        box-shadow: none;
         width: calc((100% - 24px * 2) / 3);
+    }
+
+    .portfolio-item:hover {
+        box-shadow:
+            0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
     }
 
     .container-photo-overlay {
@@ -906,19 +918,27 @@ img {
 }
 
 .mobail-menu-backdrop {
-        position: fixed;
-        z-index: 999;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        transform: translateX(100%);
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-.menu-is-open {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(100%);
+}
+
+.mobail-menu-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateX(0);
 }
+
 
 .mobail-menu {
     width: 100%;
@@ -996,16 +1016,28 @@ img {
     margin-bottom: 48px;
 }
 
-.address-list-link-mobail {
+.address-list-link-tel {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    color: #4D5AE5;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address-list-link-mobail:hover,
-.address-list-link-mobail:focus {
+.address-list-link-email {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-list-link-tel:hover,
+.address-list-link-tel:focus, 
+.address-list-link-email:hover, 
+.address-list-link-email:focus {
     color: #4D5AE5;
 }
 
